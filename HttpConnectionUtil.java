@@ -1,16 +1,27 @@
 package com.example.commu;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.util.Base64;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
+import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Set;
+
 
 
 
@@ -40,50 +51,55 @@ public class HttpConnectionUtil {
             // 헤더 세팅
             //--------------------------
             // 서버에게 웹에서 <Form>으로 값이 넘어온 것과 같은 방식으로 처리하라는 걸 알려준다
-            http.setRequestProperty("content-type", "application/x-www-form-urlencoded");
-
+//            http.setRequestProperty("content-type", "application/x-www-form-urlencoded");
+            http.setRequestProperty("Content-Type", "application/json; utf-8");
+            http.setRequestProperty("Accept", "application/json");
 
             //--------------------------
             //   서버로 값 전송
             //--------------------------
             StringBuffer buffer = new StringBuffer();
-
+            String jsonString="";
             //HashMap으로 전달받은 파라미터가 null이 아닌경우 버퍼에 넣어준다
             if (pList != null) {
-
+                jsonString="{";
                 Set key = pList.keySet();
 
                 for (Iterator iterator = key.iterator(); iterator.hasNext();) {
+
                     String keyName = (String) iterator.next();
                     String valueName = pList.get(keyName);
                     buffer.append(keyName).append("=").append(valueName);
-                    if(iterator.hasNext())
+                    jsonString+="\""+keyName;
+                    jsonString+="\": \"";
+                    jsonString+=valueName+"\"";
+                    if(iterator.hasNext()){
                         buffer.append("&");
+                        jsonString+=", ";
+                    }
+
                 }
+                jsonString+="}";
             }
+
 
 
             OutputStreamWriter outStream = new OutputStreamWriter(http.getOutputStream(), "UTF-8");
             PrintWriter writer = new PrintWriter(outStream);
-            writer.write(buffer.toString());
+            writer.write(jsonString);
             writer.flush();
 
-            //--------------------------
-            //   Response Code
-            //--------------------------
-            //http.getResponseCode();
 
 
-            //--------------------------
-            //   서버에서 전송받기
-            //--------------------------
             InputStreamReader tmp = new InputStreamReader(http.getInputStream(), "UTF-8");
             BufferedReader reader = new BufferedReader(tmp);
             StringBuilder builder = new StringBuilder();
             String str;
+
             while ((str = reader.readLine()) != null) {
                 builder.append(str + "\n");
             }
+
             myResult = builder.toString();
             return myResult;
 
@@ -94,4 +110,6 @@ public class HttpConnectionUtil {
         }
         return myResult;
     }
+
+
 }
