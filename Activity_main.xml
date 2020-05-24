@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/creal_bg">
+    <TextView
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="당신이 원한 단 한 번의 검증"
+        android:id="@+id/textview3"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#40153577"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="60dp"
+        android:weightSum="48">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <Button
+
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/by_camera"
+                android:background="@drawable/camera_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_marginBottom="12dp"
+                >
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카메라로 촬영"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="14"
+            android:gravity="center"
+            android:orientation="vertical">
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/by_gallery"
+                android:background="@drawable/gallery_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_marginBottom="12dp"
+                >
+            </Button>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="갤러리에서 선택"></TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="도움말 보기"
+        android:id="@+id/help_text"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:textColor="#153577"
+
+        />
+
+
+</LinearLayout>
