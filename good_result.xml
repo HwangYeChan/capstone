@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingHorizontal="30dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="40dp"
+        >
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tmon"
+            android:text="정품인증"
+            android:textColor="#000000"
+            android:textSize="24dp"
+
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            android:text="결과입니다"
+            android:id="@+id/textview2"
+            android:textSize="19.2dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:fontFamily="@font/tmon"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="이건 서버에서 온 데이터입니다"
+            android:id="@+id/server_response"
+            android:textSize="19.2dp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginVertical="40dp"
+            android:layout_gravity="center"
+            />
+
+
+        <ImageView
+            android:layout_marginVertical="15dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/up_image"
+            android:scaleType="fitCenter"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="정품"
+                android:id="@+id/textview3"
+                android:textSize="28dp"
+                android:textStyle="bold"
+                android:textColor="#153577"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이네요!"
+                android:id="@+id/textview4"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:layout_gravity="bottom"
+                />
+            />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="어디서 이런 멋진 정품을 구하셨어요?"
+            android:id="@+id/textview5"
+            android:textSize="12dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="25dp"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증상세정보"
+            android:id="@+id/textview6"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증일시 : 2019년 12월 9일 오후 10:26"
+            android:id="@+id/textview7"
+            android:textSize="14dp"
+            android:textColor="#8B8686"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인증번호 : BOJNOOTDD9"
+            android:id="@+id/textview8"
+            android:textSize="14dp"
+            android:textColor="#8B8686"
+            android:layout_marginBottom="15dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제품명: 아이폰 XV"
+            android:id="@+id/textview9"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제조날짜: 2019년 11월 22일"
+            android:id="@+id/textview10"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시리얼번호: DF60-B64E-E5BS-3AU8"
+            android:id="@+id/textview11"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="QR코드 정보: a079c7df2517bf647"
+            android:id="@+id/textview12"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="부품상세정보:"
+            android:id="@+id/textview13"
+            android:textSize="13dp"
+            android:textColor="#000000"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="8dp">
+
+            <TextView
+                android:id="@+id/textview14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="가속도계: 보쉬(Bosch, 독일)\n오디오 칩셋 및 코덱: 시러스 로직\n베이스밴드 프로세서: 퀄컴\n배터리: 삼성\n카메라: 소니\n칩셋 및 프로세서: 삼성(한국)과 TSMC(대만)\n컨트롤러 칩: PMC 시에라 및 브로도콤\n디스플레이: 재팬 디스플레이 및 샤프\nDRAM: TSMC(대만)"
+                android:textColor="#6F6969"
+                android:textSize="11dp" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="+ 자세히"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:text="이미지 특징정보:"
+            android:id="@+id/textview15"
+            android:textSize="14dp"
+            android:textColor="#000000"
+            />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:id="@+id/down_image"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="정품 지원 서비스 지원 확인"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textview16"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="유요한 구입일"
+            android:layout_marginTop="7dp"
+            android:id="@+id/textview17"
+            android:textSize="13dp"
+            android:textColor="#7E7575"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="확인된 구입일을 알려주시면 Apple에서 신속하게 고객님의 제품을 찾아 도와 드릴 수 있습니다."
+            android:layout_marginTop="4dp"
+            android:id="@+id/textview18"
+            android:textSize="12dp"
+            android:textColor="#7E7575"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전화 기술 지원: 만료됨"
+            android:layout_marginTop="19dp"
+            android:id="@+id/textview19"
+            android:textSize="13dp"
+            android:textColor="#7E7575"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고객님은 Apple Advisor(상담사)로부터 전화 기술 지원을 구입하실 수 있습니다."
+            android:layout_marginTop="4dp"
+            android:id="@+id/textview20"
+            android:textSize="12dp"
+            android:textColor="#7E7575"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apple 지원에 문의하기"
+            android:layout_marginTop="5dp"
+            android:id="@+id/link1"
+            android:textSize="13dp"
+            android:textColor="#00B0F0"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수리 및 서비스 보증: 유효함"
+            android:layout_marginTop="19dp"
+            android:id="@+id/textview21"
+            android:textSize="13dp"
+            android:textColor="#7E7575"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고객님의 제품에는 Apple 제한 보증에 따라 대상 하드웨어 수리 및 서비스가 적용됩니다.\n예상 만료일: 2020년 6월 30일"
+            android:layout_marginTop="4dp"
+            android:id="@+id/textview22"
+            android:textSize="12dp"
+            android:textColor="#7E7575"
+            android:layout_marginBottom="1dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="고객님의 제품에 대한 Apple의 보증 정보를 알아보십시오.\n수리 신청하기"
+            android:layout_marginTop="5dp"
+            android:id="@+id/link2"
+            android:textSize="13dp"
+            android:textColor="#00B0F0"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:layout_marginBottom="1dp"
+            />
+
+    </LinearLayout>
+</ScrollView>
